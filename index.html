@@ -3,54 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>심플한 웹페이지</title>
+    <title>테크이노베이션 - 혁신적인 기술 솔루션</title>
+    <meta name="description" content="테크이노베이션은 최신 기술로 비즈니스 혁신을 이끄는 전문 기업입니다.">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+        /* === 기본 스타일 (프레젠테이션 계층) === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* === 헤더 (웹 계층) === */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
-        p {
-            color: #666;
-            margin-bottom: 15px;
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        .button {
-            display: inline-block;
-            background-color: #007bff;
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
             color: white;
-            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: opacity 0.3s;
         }
-        .button:hover {
-            background-color: #0056b3;
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        /* === 메인 콘텐츠 (애플리케이션 계층) === */
+        .main-content {
+            margin-top: 80px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        /* === 섹션 스타일 === */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        /* === 푸터 (데이터 계층 정보) === */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* === 반응형 디자인 === */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>안녕하세요!</h1>
-        <p>이것은 심플한 HTML 페이지입니다.</p>
-        <p>깔끔하고 간단한 디자인으로 만들어졌습니다.</p>
-        <p>
-            <a href="#" class="button">버튼 예시</a>
-        </p>
-    </div>
+    <!-- 헤더 (웹 계층 - 사용자 인터페이스) -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">테크이노베이션</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#services">서비스</a></li>
+                    <li><a href="#about">회사소개</a></li>
+                    <li><a href="#contact">연락처</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 (애플리케이션 계층 - 비즈니스 로직) -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">혁신적인 기술 솔루션</h1>
+                <p class="hero-subtitle">
+                    테크이노베이션은 최신 기술과 창의적 아이디어로<br>
+                    고객의 비즈니스 성공을 이끌어갑니다
+                </p>
+                <a href="#services" class="cta-button">서비스 알아보기</a>
+            </div>
+        </section>
+
+        <!-- 서비스 섹션 -->
+        <section id="services" class="section">
+            <h2 class="section-title">핵심 서비스</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3>웹 개발</h3>
+                    <p>현대적이고 반응형인 웹사이트와 웹 애플리케이션을 개발합니다. 사용자 경험을 최우선으로 하는 인터페이스 설계를 제공합니다.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">☁️</span>
+                    <h3>클라우드 솔루션</h3>
+                    <p>확장 가능하고 안전한 클라우드 인프라를 구축합니다. 고가용성과 보안을 보장하는 아키텍처를 설계합니다.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>모바일 앱</h3>
+                    <p>iOS와 Android 플랫폼을 위한 네이티브 및 크로스플랫폼 모바일 애플리케이션을 개발합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 회사 소개 섹션 -->
+        <section id="about" class="section">
+            <h2 class="section-title">회사 소개</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>우리의 미션</h3>
+                    <p>
+                        테크이노베이션은 2020년 설립된 기술 전문 기업으로, 
+                        혁신적인 디지털 솔루션을 통해 고객의 비즈니스 성장을 지원합니다.
+                    </p>
+                    <p>
+                        우리는 최신 기술 트렌드를 선도하며, 고객 맞춤형 솔루션을 제공하여 
+                        디지털 전환 시대에 경쟁력을 확보할 수 있도록 돕습니다.
+                    </p>
+                    <p>
+                        전문성, 혁신성, 신뢰성을 바탕으로 고객과 함께 성장하는 
+                        파트너가 되겠습니다.
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span>완료 프로젝트</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span>만족한 고객</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4년</span>
+                        <span>업계 경험</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 (데이터 계층 - 연락처 정보) -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2>연락처</h2>
+            <div class="contact-info">
+                <div>
+                    <h4>주소</h4>
+                    <p>서울특별시 강남구 테헤란로 123<br>테크타워 10층</p>
+                </div>
+                <div>
+                    <h4>연락처</h4>
+                    <p>전화: 02-1234-5678<br>이메일: info@techinnovation.co.kr</p>
+                </div>
+                <div>
+                    <h4>운영시간</h4>
+                    <p>평일: 09:00 - 18:00<br>주말 및 공휴일 휴무</p>
+                </div>
+            </div>
+            <p>&copy; 2024 테크이노베이션. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 간단한 스크롤 효과 (향후 확장 가능)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
