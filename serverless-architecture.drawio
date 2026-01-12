@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.0">
   <diagram name="페이지-1" id="YaSDx6-uChD5jXUGqX4K">
-    <mxGraphModel dx="1763" dy="1801" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2217" dy="2268" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -286,7 +286,7 @@
           <mxGeometry height="30" width="113" x="300" y="320" as="geometry" />
         </mxCell>
         <mxCell id="3oEi8GM7zD8lb-hK7w-a-168" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="10.0.2.0/24&lt;div&gt;IP Range : 251(-5)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="102.5" x="1003.5" y="320" as="geometry" />
+          <mxGeometry height="30" width="102.5" x="980.5" y="320" as="geometry" />
         </mxCell>
         <mxCell id="3oEi8GM7zD8lb-hK7w-a-170" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="10.0.22.0/24&lt;div&gt;IP Range : 251(-5)&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="148" x="961" y="1161" as="geometry" />
@@ -813,6 +813,9 @@
         <mxCell id="3oEi8GM7zD8lb-hK7w-a-511" edge="1" parent="1" source="3oEi8GM7zD8lb-hK7w-a-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3oEi8GM7zD8lb-hK7w-a-312">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="3oEi8GM7zD8lb-hK7w-a-148" parent="1" style="fillColor=none;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#147EBA;whiteSpace=wrap;html=1;" value="Availability Zone B" vertex="1">
+          <mxGeometry height="1086" width="507" x="609" y="289" as="geometry" />
+        </mxCell>
         <mxCell id="3oEi8GM7zD8lb-hK7w-a-514" edge="1" parent="1" source="3oEi8GM7zD8lb-hK7w-a-499" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="3oEi8GM7zD8lb-hK7w-a-303">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -827,9 +830,6 @@
             <mxPoint x="659" y="383" as="sourcePoint" />
             <mxPoint x="885" y="416" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="3oEi8GM7zD8lb-hK7w-a-148" parent="1" style="fillColor=none;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#147EBA;whiteSpace=wrap;html=1;" value="Availability Zone B" vertex="1">
-          <mxGeometry height="1086" width="479.49" x="627.51" y="289" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
